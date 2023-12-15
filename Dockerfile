@@ -39,7 +39,7 @@ COPY config/php/php.ini /usr/local/etc/php/php.ini
 
 # Copia los archivos de la aplicación Laravel al contenedor
 COPY src /var/www
-RUN composer install  --optimize-autoloader
+RUN composer install
 RUN npm install
 RUN npm run build
 # RUN  composer install --optimize-autoloader -d "/srv/vendor"
